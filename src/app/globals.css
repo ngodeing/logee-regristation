@@ -19,6 +19,34 @@
   align-items: center;
 }
 
+.list {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color:#757575;
+}
+.list:hover {
+  background-color: #ffe7e5;
+}
+
+.input-regis {
+  border: 1px solid #A0A0AB;
+  border-radius: 10px;
+  width: 350px;
+  padding: 8px 10px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: #1b1b1b;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.label-regis {
+  color: #3F4045;
+  font-weight: bold;
+}
+
 .verification-control {
   border: 1px solid #A0A0AB;
   border-radius: 3px;
