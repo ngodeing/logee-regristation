@@ -19,6 +19,32 @@
   align-items: center;
 }
 
+.verification-control {
+  border: 1px solid #A0A0AB;
+  border-radius: 3px;
+  padding: 10px 10px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: #1b1b1b;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.no-spinner[type="number"] {
+    -moz-appearance: textfield;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function FormReg() {
+export default function FormReg({ handleRegister }) {
     return (
         <form action="" className="flex flex-col gap-3 text-black w-[500px] bg-white p-10 py-8 rounded-2xl">
             <h3 className="font-semibold text-3xl">Registrasi</h3>
@@ -37,7 +37,7 @@ export default function FormReg() {
                     <Image src="/images/password.png" alt="user" width={20} height={20}/>
                     <input type="password" name="confirmpassword" id="confirmpassword" className="border-none w-full focus:outline-none" placeholder="Masukkan Konfirmasi Kata Sandi"/>
                 </div>
-                <button className="bg-[#FF5600] px-5 py-3 rounded font-semibold text-white" type="submit">Registrasi</button>
+                <button className="bg-[#FF5600] px-5 py-3 rounded font-semibold text-white" type="submit" onClick={handleRegister}>Registrasi</button>
             </div>
         </form>
     )

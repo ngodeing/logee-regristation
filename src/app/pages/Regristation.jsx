@@ -1,6 +1,16 @@
+"use client"
 import Image from "next/image";
 import FormReg from "../components/form/FormReg";
+import Verification from "../components/form/Verification";
+import { useState } from "react";
+
 export default function Registration() {
+    const [status, setstatus] = useState('unsend');
+
+    const handleRegister = () => {
+        setstatus('send');
+    };
+
     return (
         <div className="bg-[#FFF7F3]">
             <div className="flex justify-between items-center h-[100vh] bg-[#FFF7F3] w-[1100px] mx-auto">
@@ -18,7 +28,7 @@ export default function Registration() {
                         <Image src='/images/slider.png' alt="register" width={75} height={500} className="cursor-pointer" />
                     </div>
                 </div>
-                <FormReg />
+                {status === 'send' ? <Verification /> : <FormReg handleRegister={handleRegister} />}
             </div>
         </div>
     )
