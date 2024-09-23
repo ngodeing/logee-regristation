@@ -29,6 +29,21 @@
   background-color: #ffe7e5;
 }
 
+.verification-control {
+  border: 1px solid #A0A0AB;
+  border-radius: 3px;
+  padding: 10px 10px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: #1b1b1b;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .input-regis {
   border: 1px solid #A0A0AB;
   border-radius: 10px;
@@ -47,25 +62,22 @@
   font-weight: bold;
 }
 
-.verification-control {
-  border: 1px solid #A0A0AB;
-  border-radius: 3px;
-  padding: 10px 10px;
-  margin-top: 5px;
-  margin-bottom: 25px;
-  color: #1b1b1b;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  width: 50px;
-  text-align: center;
-  font-weight: bold;
-}
-
 @media screen and (max-width: 768px) {
   .verification-control {
     width: 40px;
     height: 40px;
+  }
+  .form-control {
+    font-size: 12px;
+    gap: 10px;
+  }
+  .input-regis {
+    width: 250px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .label-regis {
+    font-size: 14px;
   }
 }
 
