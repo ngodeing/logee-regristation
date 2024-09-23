@@ -37,7 +37,7 @@ export default function FormReg({ handleRegister }) {
                     <Image src="/images/password.png" alt="user" width={20} height={20}/>
                     <input type="password" name="confirmpassword" id="confirmpassword" className="border-none w-full focus:outline-none" placeholder="Masukkan Konfirmasi Kata Sandi"/>
                 </div>
-                <button className="bg-[#FF5600] px-5 py-2 lg:py-3 rounded font-semibold text-white text-sm lg:text-base" type="submit" onClick={handleRegister}>Registrasi</button>
+                <button className="bg-[#FF5600] px-5 py-2 lg:py-3 rounded font-semibold text-white text-sm lg:text-base transition-all duration-100 ease-in-out transform hover:bg-[#ffffff] hover:text-[#FF5600] border border-[#FF5600] box-border" type="submit" onClick={handleRegister}>Registrasi</button>
             </div>
         </form>
     )

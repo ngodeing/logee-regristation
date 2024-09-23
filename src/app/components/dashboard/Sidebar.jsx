@@ -6,7 +6,7 @@ export default function Sidebar(){
     const { isSidebarOpen, toggleSidebar } = useSidebar();
 
     return (
-        <div className={`${isSidebarOpen ? "w-[250px]" : "w-[0px]"} flex flex-col  bg-white border top-0 left-0 absolute h-[100vh] shadow`}>
+        <div className={`${isSidebarOpen ? "w-[250px]" : "w-0"} flex flex-col  bg-white border top-0 left-0 fixed h-full shadow`}>
             {isSidebarOpen && (
                 <>
                 <div className="flex items-center justify-center py-3 border">
@@ -35,7 +35,11 @@ export default function Sidebar(){
                 </div>
                 </>
             )}
-            <Image src="/images/Small-Active.png" alt="logo" width={40} height={100} className={`${isSidebarOpen ? "right-5 bottom-10 absolute" : "bottom-10 left-5 fixed"} cursor-pointer`} onClick={toggleSidebar}/> 
+            {isSidebarOpen ? (
+                <Image src="/images/Small-Active.png" alt="logo" width={40} height={100} className={`right-5 bottom-10 absolute cursor-pointer`} onClick={toggleSidebar}/>
+            ): (
+                <Image src="/images/Small-Active2.png" alt="logo" width={40} height={100} className={`bottom-10 left-5 fixed cursor-pointer`} onClick={toggleSidebar}/>
+            )} 
         </div>
     )
 }

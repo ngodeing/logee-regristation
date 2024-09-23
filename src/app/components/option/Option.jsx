@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Option() {
     return (
         <Link href="/registration">
-        <div className="bg-white border flex cursor-pointer px-6 py-4 rounded-2xl lg:w-[500px] w-[250px] lg:justify-center items-center">
+        <div className="bg-white border flex cursor-pointer px-6 py-4 rounded-2xl lg:w-[500px] w-[250px] lg:justify-center items-center transition-all duration-100 ease-in-out transform hover:bg-gray-100">
             <Image src="/images/shop.png" alt="logo" width={75} height={50} className="cursor-pointer w-[30px] lg:w-[75px]" />
             <div className="flex flex-col text-black justify-start items-center lg:ml-10 ml-3">
                 <h3 className="font-semibold items-start self-start lg:text-xl text-md">Pelaku Usaha</h3>
