@@ -38,15 +38,15 @@ export default function Navbar() {
             {/* Links (hidden on mobile, shown on larger screens) */}
             <div className={`md:flex ${isMenuOpen ? "flex p-5 mx-auto right-0 top-[-20px] absolute bg-slate-600 text-center shadow-2xl" : "hidden"} flex-col md:flex-row md:items-center w-full md:w-auto mt-4 md:mt-0`}>
                 <ul className="flex flex-col md:flex-row lg:gap-10 gap-5 mr-0 md:mr-20 font-semibold cursor-pointer mt-5 lg:mt-0">
-                    <li className="hover:text-[#FF5600]">Solusi</li>
-                    <li className="hover:text-[#FF5600]">Produk</li>
-                    <li className="hover:text-[#FF5600]">Artikel</li>
-                    <li className="hover:text-[#FF5600]">Hubungi</li>
+                    <li className="hover:text-[#FF5600] text-white">Solusi</li>
+                    <li className="hover:text-[#FF5600] text-white">Produk</li>
+                    <li className="hover:text-[#FF5600] text-white">Artikel</li>
+                    <li className="hover:text-[#FF5600] text-white">Hubungi</li>
                 </ul>
 
                 <div className="flex flex-col md:flex-row lg:gap-5 gap-3 mt-10 md:mt-0">
                 <button
-                    className="bg-[#FF5600] lg:py-3 px-4 py-2 rounded-md font-semibold text-sm lg:w-[120px] transition-all duration-100 ease-in-out transform hover:scale-110 hover:bg-[#2f2f2f] active:scale-95"
+                    className="bg-[#FF5600] text-white lg:py-3 px-4 py-2 rounded-md font-semibold text-sm lg:w-[120px] transition-all duration-100 ease-in-out transform hover:scale-110 hover:bg-[#2f2f2f] active:scale-95"
                     onClick={handleClick}
                 >
                     Daftar
