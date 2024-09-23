@@ -120,9 +120,9 @@ export default function Dashboard() {
                             </div>
                         </div>
                         
-                        <div className='flex flex-col justify-center lg:flex-row gap-5 items-center lg:self-end w-full mt-20'>
+                        <div className='flex flex-col justify-center lg:flex-row gap-5 items-center lg:self-end w-full lg:w-auto mt-20'>
                             <button className="bg-white border-2 box-border border-[#FF5600] py-2 rounded-xl font-semibold text-[#FF5600] text-sm lg:text-base w-full lg:w-[180px]">Simpan Progress</button>
-                            <button className='bg-[#FF5600] py-2 border-2 border-[#FF5600]  rounded-xl font-semibold text-white text-sm lg:text-base w-full lg:w-[180px' onClick={addSteps}>Selanjutnya</button>
+                            <button className='bg-[#FF5600] py-2 border-2 border-[#FF5600]  rounded-xl font-semibold text-white text-sm lg:text-base w-full lg:w-[180px]' onClick={addSteps}>Selanjutnya</button>
                         </div>
                     </form>
                 </div>
