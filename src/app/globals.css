@@ -62,6 +62,13 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .verification-control {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .no-spinner::-webkit-outer-spin-button,
 .no-spinner::-webkit-inner-spin-button {
     -webkit-appearance: none;

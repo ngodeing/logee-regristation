@@ -1,8 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react";
+
 export default function Sidebar(){
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = () => {
+        if (isOpen === true) {
+            setIsOpen(false);
+        } else {
+            setIsOpen(true);
+        }
+    }
     return (
-        <div className="flex flex-col w-[250px] bg-white border top-0 left-0 absolute h-[100vh] shadow">
+        <div className={`flex flex-col w-[250px] bg-white border top-0 left-0 absolute h-[100vh] shadow`}>
             <div className="flex items-center justify-center py-3 border">
                 <Image src="/images/logee-black.png" alt="logo" width={150} height={100} className="cursor-pointer"/>
             </div>

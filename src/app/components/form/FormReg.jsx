@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FormReg({ handleRegister }) {
     return (
-        <form action="" className="flex flex-col gap-3 text-black w-[500px] bg-white p-10 py-8 rounded-2xl">
+        <form action="" className="flex flex-col gap-3 text-black lg:w-[500px] w-[280px] bg-white lg:px-10 px-5 lg:py-8 py-6 lg:rounded-2xl rounded-lg">
             <h3 className="font-semibold text-3xl">Registrasi</h3>
             <p className="text-sm text-gray-400">Daftar sekarang dan buat akun untuk menemukan layanan yang sesuai dengan kebutuhan bisnis Anda</p>
             <div className="form-group flex flex-col">
@@ -12,7 +12,7 @@ export default function FormReg({ handleRegister }) {
                     <input type="text" name="username" className="border-none w-full focus:outline-none" id="username"placeholder="Masukkan Nama"/>
                 </div>
                 <label htmlFor="gender">Sebutan</label>
-                <div className="flex gap-20 mb-8 mt-2 text-gray-400">
+                <div className="flex lg:gap-20 gap-10 mb-8 mt-2 text-gray-400">
                 <div className="flex gap-2">
                     <input type="radio" name="gender" id="male" className="w-7"/>
                     <label htmlFor="male">Bapak</label>
