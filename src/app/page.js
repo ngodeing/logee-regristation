@@ -1,12 +1,12 @@
-import Registration from "./pages/Regristation";
-import HomePage from "./pages/HomePage";
-import OptionPage from "./pages/OptionPage";
-import DashboardPage from "./pages/DashboardPage";
+import DashboardPage from "./dashboard/page";
+import OptionPage from "./option/page";
+import HomePage from "./home/page";
+import RegistrationPage from "./registration/page";
 
 export default function Page(){
     return (
         <>
-        <DashboardPage />
+        <HomePage />
         </>
     )
 }

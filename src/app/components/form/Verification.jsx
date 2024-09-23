@@ -1,4 +1,11 @@
+"use client"
+import { useRouter } from "next/navigation"
+
 export default function Verification() {
+    const router = useRouter()
+    const handleClick = () => {
+        router.push('/dashboard')
+    }
     return (
         <form action="" className="flex flex-col gap-5 text-black w-[500px] bg-white px-16 py-36 rounded-2xl justify-center items-center">
             <div className="flex flex-col gap-2 justify-center items-center mb-10">
@@ -15,7 +22,7 @@ export default function Verification() {
             <div>
             </div>
             <div className="w-full">
-            <button className="bg-[#FF5600] px-5 py-3 rounded font-semibold text-white w-full mb-5">Verifikasi Akun</button>
+            <button className="bg-[#FF5600] px-5 py-3 rounded font-semibold text-white w-full mb-5" onClick={handleClick} type="button">Verifikasi Akun</button>
             <p className="text-gray-400 text-center">Tidak menerima kode?<br />Periksa Folder spam atau <a href="" className="text-[#FF5600]">kirim ulang kode</a></p>
             </div>
         </form>

@@ -2,9 +2,11 @@
 import { useState } from 'react';
 import Layout from './layout';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 export default function Dashboard() {
     const [steps, setSteps] = useState(0);
     const [fileName, setFileName] = useState("");
+    const router = useRouter();
 
     const addSteps = () => {
         setSteps(steps + 1);
@@ -21,6 +23,10 @@ export default function Dashboard() {
         ktp: "",
         aktaMentri: ""
     });
+
+    const handleClick = () => {
+        router.push('/home');
+    }
       
     const handleFileChange = (event, fieldName) => {
         const file = event.target.files[0];
@@ -35,7 +41,7 @@ export default function Dashboard() {
     return (
         <Layout>
             {steps === 0 && (
-                <div className=' bg-white flex flex-col justify-center items-center pt-28 ml-60'>
+                <div className='h-[100vh] overflow-scroll bg-white flex flex-col justify-center items-center pt-80 ml-60'>
                     <div className='flex flex-col justify-center items-center gap-5'>
                         <h1 className='text-2xl font-semibold text-[#3F4045]'>Daftar Sebagai Perusahaan</h1>
                         <Image src="/images/Steps.png" alt="logo" width={800} height={100} className="cursor-pointer" />
@@ -153,7 +159,7 @@ export default function Dashboard() {
                 </div>
             )}
             { steps === 2 && (
-                <div className=' bg-white flex flex-col justify-center items-center pt-28 ml-60'>
+                <div className='h-[100vh] overflow-scroll bg-white flex flex-col justify-center items-center pt-48 ml-60'>
                     <div className='flex flex-col justify-center items-center gap-5'>
                         <h1 className='text-2xl font-semibold text-[#3F4045]'>Daftar Sebagai Perusahaan</h1>
                         <Image src="/images/Steps3.png" alt="logo" width={800} height={100} className="cursor-pointer" />
@@ -215,12 +221,12 @@ export default function Dashboard() {
                 </div>
             )}
             {steps === 3 && (
-                <div className='h-[100vh] bg-white flex flex-col justify-center items-center pt-16 ml-60'>
+                <div className='h-[100vh] bg-white flex flex-col justify-center items-center pt-12 ml-60'>
                         <Image src="/images/person.png" alt="logo" width={200} height={100} />
                         <h1 className='font-semibold text-[#3F4045] text-3xl mb-3 mt-10'>Pendaftaran Berhasil</h1>
-                        <p className='text-[#3F4045] w-[400px] text-center'>Harap tunggu<span className='font-semibold'>1-2 hari untuk proses verifikasi.</span> Anda akan menerima <span className='font-semibold'>notifikasi melalui email</span> setelah proses verifikasi selesai.</p>
-                        <button className='bg-[#FF5600] w-[250px] py-2 border-2 border-[#FF5600] rounded-lg font-semibold text-white mt-5'>Jelajahi Fitur Kami</button>
-                        <p className='text-[#3F4045] text-sm mt-5'>Jika ada pertanyaan, silakan hubungi <span className='font-semibold'>Customer Care.</span></p>
+                        <p className='text-[#3F4045] w-[400px] text-center'>Harap tunggu<span className='font-semibold'> 1-2 hari untuk proses verifikasi.</span> Anda akan menerima <span className='font-semibold'>notifikasi melalui email</span> setelah proses verifikasi selesai.</p>
+                        <button className='bg-[#FF5600] w-[250px] py-2 border-2 border-[#FF5600] rounded-lg font-semibold text-white mt-5' onClick={handleClick} type='button'>Jelajahi Fitur Kami</button>
+                        <p className='text-[#3F4045] text-sm mt-5'>Jika ada pertanyaan, silakan hubungi <span className='font-semibold cursor-pointer'>Customer Care.</span></p>
                 </div>
             )}
         </Layout>
